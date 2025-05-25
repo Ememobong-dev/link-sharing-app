@@ -33,7 +33,7 @@ export const Navbar = () => {
         <Link
           href={"/profile"}
           className={` ${
-            pathname === "profile"
+            pathname === "/profile"
               ? "text-indigo-600 font-bold bg-indigo-200/80"
               : "text-gray-500 bg-transparent"
           }  flex items-center justify-center gap-2 py-2 px-6 rounded-lg  `}
