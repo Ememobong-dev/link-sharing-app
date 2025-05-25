@@ -43,7 +43,7 @@ export const Navbar = () => {
         </Link>
       </div>
       <div className="bg-transparent border font-bold border-indigo-700 py-2 px-6  rounded-lg flex justify-center items-center text-indigo-600">
-        Preview
+        <Link href={'/preview'}>Preview</Link>
       </div>
     </div>
   );

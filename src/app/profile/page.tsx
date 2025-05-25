@@ -34,12 +34,22 @@ const Profile = () => {
                           Profile picture
                         </p>
                         <div className="flex gap-4 items-center ">
-                          <div className="w-[200px] h-[150px]">
+                          <div className="w-[200px] h-[150px] relative">
                             <Image
                               src={profileImg}
                               priority
-                              className="w-full  rounded-xl object-center h-[150px] "
+                              className="w-full cursor-pointer rounded-xl object-center h-[150px] "
                               alt="profile_img"
+                            />
+                            <input
+                              className="absolute top-1/2 text-sm text-stone-500
+   file:mr-5 file:py-1 file:px-3 file:border-[1px]
+   file:text-xs file:font-medium
+   file:bg-stone-50 file:text-stone-700
+   hover:file:cursor-pointer hover:file:bg-blue-50
+   hover:file:text-blue-700 cursor-pointer placeholder:text-white"
+                              placeholder="Change Image"
+                              type="file"
                             />
                           </div>
                           <p className="text-black/60 text-[12px]">
@@ -53,44 +63,38 @@ const Profile = () => {
                     <div className="bg-gray-500/10 p-4 rounded-lg h-auto">
                       <div className="flex flex-col gap-3">
                         <div className="flex justify-between">
-                          <p className="w-1/2">First Name*</p>
-                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
-                            <div className=" w-full font-semibold items-center text-gray-500">
-                              <input
-                                type="text"
-                                className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
-                                placeholder="Ben"
-                              />
-                            </div>
-                          </div>
+                          <p className="w-1/2 text-[12px] text-black/60">
+                            First Name*
+                          </p>
+                          <input
+                            type="text"
+                            className="bg-white border border-black/25 w-full py-2 px-5 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:shadow shadow-indigo-700"
+                            placeholder="Ben"
+                          />
                         </div>
                         <div className="flex justify-between">
-                          <p className="w-1/2">Last Name*</p>
-                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
-                            <div className=" w-full font-semibold items-center text-gray-500">
-                              <input
-                                type="text"
-                                className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
-                                placeholder="Wright"
-                              />
-                            </div>
-                          </div>
+                          <p className="w-1/2 text-[12px] text-black/60">
+                            Last Name*
+                          </p>
+                          <input
+                            type="text"
+                            className="bg-white border border-black/25 w-full py-2 px-5 rounded-lg focus:border-0 text-gray-500 placeholder-gray-500 focus:outline-none focus:shadow shadow-indigo-700"
+                            placeholder="Wright"
+                          />
                         </div>
                         <div className="flex justify-between">
-                          <p className="w-1/2">Email</p>
-                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
-                            <div className=" w-full font-semibold items-center text-gray-500">
-                              <input
-                                type="text"
-                                className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
-                                placeholder="ben@example.com"
-                              />
-                            </div>
-                          </div>
+                          <p className="w-1/2 text-[12px] text-black/60">
+                            Email
+                          </p>
+
+                          <input
+                            type="text"
+                            className="bg-white border border-black/25 w-full py-2 px-5 rounded-lg focus:border-0 text-gray-500 placeholder-gray-500 focus:outline-none focus:shadow shadow-indigo-700"
+                            placeholder="ben@example.com"
+                          />
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
                 {/* SAVE BUTTON AREA */}
