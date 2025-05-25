@@ -1,7 +1,8 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 
 export const PhoneDisplay = () => {
@@ -33,9 +34,9 @@ export const PhoneDisplay = () => {
             <div className="cursor-pointer flex justify-between items-center text-white bg-red-400 rounded-lg w-full py-2 px-3">
               <div className="flex gap-3 items-center">
                 <span>
-                  <FaGithub />
+                  <FaYoutube />
                 </span>
-                <p>Github</p>
+                <p>YouTube</p>
               </div>
               <div>
                 <FaArrowRight />
@@ -44,7 +45,7 @@ export const PhoneDisplay = () => {
             <div className="cursor-pointer flex justify-between items-center text-white bg-blue-500 rounded-lg w-full py-2 px-3">
               <div className="flex gap-3 items-center">
                 <span>
-                  <FaGithub />
+                  <FaLinkedin />
                 </span>
                 <p>Github</p>
               </div>
