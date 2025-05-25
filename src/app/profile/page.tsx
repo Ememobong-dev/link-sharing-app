@@ -1,15 +1,9 @@
 import React from "react";
 import { PhoneDisplay } from "@/components/PhoneDisplay";
 import { Col, Row } from "antd";
-import { TfiLineDouble } from "react-icons/tfi";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { FiLink } from "react-icons/fi";
-import { FaYoutube } from "react-icons/fa";
 import { Navbar } from "@/components/Navbar";
 import Image from "next/image";
-import profileImg from "../../../public/profile_pic.jpg"
-
-
+import profileImg from "../../../public/profile_pic.jpg";
 
 const Profile = () => {
   return (
@@ -33,73 +27,70 @@ const Profile = () => {
                       profile.
                     </p>
                   </div>
-                  <div className="flex flex-col gap-5">
-                    <div className="bg-gray-500/10 p-4 rounded-lg h-auto">
-                      <div className="flex justify-between">
-                        <p className="text-gray-600 font-semibold">
+                  <div className="flex flex-col gap-5 mt-14">
+                    <div className="bg-gray-500/10 p-4 rounded-lg h-full">
+                      <div className="flex justify-between items-center">
+                        <p className="text-black/60 w-1/2 text-[12px] ">
                           Profile picture
                         </p>
-                        <div className="flex ">
-                            <div>
-                                <Image src={profileImg} alt="profile_img" />
-
-                            </div>
-                          <p className="text-gray-600 font-semibold">
-                           Images must be  below  1024x1024.  Use PNG, JPG, or MBP ormat
+                        <div className="flex gap-4 items-center ">
+                          <div className="w-[200px] h-[150px]">
+                            <Image
+                              src={profileImg}
+                              priority
+                              className="w-full  rounded-xl object-center h-[150px] "
+                              alt="profile_img"
+                            />
+                          </div>
+                          <p className="text-black/60 text-[12px]">
+                            Images must be below 1024x1024. Use PNG, JPG, or MBP
+                            format
                           </p>
                         </div>
                       </div>
                     </div>
                     {/* NEWER LINK TABS */}
                     <div className="bg-gray-500/10 p-4 rounded-lg h-auto">
-                      <div className="flex justify-between items-center">
-                        <div className="font-bold flex gap-2 items-center text-gray-600 ">
-                          <TfiLineDouble />
-                          Link #1
-                        </div>
-                        <div>
-                          <p className="text-gray-600">Remove</p>
-                        </div>
-                      </div>
-                      {/* inputs Area */}
-                      <div className="flex flex-col gap-2 mt-3">
-                        <p className="text-black/60 font-semibold text-sm">
-                          Platform
-                        </p>
-                        <div className="">
+                      <div className="flex flex-col gap-3">
+                        <div className="flex justify-between">
+                          <p className="w-1/2">First Name*</p>
                           <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
-                            <div className="flex font-semibold gap-2 items-center text-gray-500">
-                              <span>
-                                <FaYoutube />
-                              </span>
-                              <p>Youtube</p>
-                            </div>
-                            <div className="text-indigo-700 text-3xl">
-                              <RiArrowDropDownLine />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-2 mt-3">
-                        <p className="text-black/60 font-semibold text-sm">
-                          link
-                        </p>
-                        <div className="">
-                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
-                            <div className="flex font-semibold gap-2 items-center text-gray-500">
-                              <span>
-                                <FiLink />
-                              </span>
+                            <div className=" w-full font-semibold items-center text-gray-500">
                               <input
                                 type="text"
                                 className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
-                                placeholder="https://www.youtube.com/benwright"
+                                placeholder="Ben"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex justify-between">
+                          <p className="w-1/2">Last Name*</p>
+                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
+                            <div className=" w-full font-semibold items-center text-gray-500">
+                              <input
+                                type="text"
+                                className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
+                                placeholder="Wright"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex justify-between">
+                          <p className="w-1/2">Email</p>
+                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
+                            <div className=" w-full font-semibold items-center text-gray-500">
+                              <input
+                                type="text"
+                                className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
+                                placeholder="ben@example.com"
                               />
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
                 {/* SAVE BUTTON AREA */}
