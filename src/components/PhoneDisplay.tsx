@@ -19,7 +19,7 @@ export const PhoneDisplay = () => {
 
           {/* social buttons */}
           <div className="flex flex-col w-full gap-3 mt-10">
-            <div className="flex justify-between items-center text-white bg-black/90 rounded-lg w-full py-2 px-3">
+            <div className="cursor-pointer flex justify-between items-center text-white bg-black/90 rounded-lg w-full py-2 px-3">
               <div className="flex gap-3 items-center">
                 <span>
                   <FaGithub />
@@ -30,7 +30,7 @@ export const PhoneDisplay = () => {
                 <FaArrowRight />
               </div>
             </div>
-            <div className="flex justify-between items-center text-white bg-red-400 rounded-lg w-full py-2 px-3">
+            <div className="cursor-pointer flex justify-between items-center text-white bg-red-400 rounded-lg w-full py-2 px-3">
               <div className="flex gap-3 items-center">
                 <span>
                   <FaGithub />
@@ -41,7 +41,7 @@ export const PhoneDisplay = () => {
                 <FaArrowRight />
               </div>
             </div>
-            <div className="flex justify-between items-center text-white bg-blue-500 rounded-lg w-full py-2 px-3">
+            <div className="cursor-pointer flex justify-between items-center text-white bg-blue-500 rounded-lg w-full py-2 px-3">
               <div className="flex gap-3 items-center">
                 <span>
                   <FaGithub />
@@ -52,8 +52,8 @@ export const PhoneDisplay = () => {
                 <FaArrowRight />
               </div>
             </div>
-            <div className="flex justify-between items-center text-white bg-gray-500/10 rounded-lg py-2 px-8 h-9 w-full"></div>
-            <div className="flex justify-between items-center text-white bg-gray-500/10 rounded-lg py-2 px-8 h-9 w-full"></div>
+            <div className="cursor-pointer flex justify-between items-center text-white bg-gray-500/10 rounded-lg py-2 px-8 h-9 w-full"></div>
+            <div className="cursor-pointer flex justify-between items-center text-white bg-gray-500/10 rounded-lg py-2 px-8 h-9 w-full"></div>
           </div>
         </div>
       </div>
