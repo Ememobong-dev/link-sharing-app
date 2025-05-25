@@ -63,7 +63,43 @@ export default function Home() {
                         </div>
                       </div>
                       {/*  */}
-                      
+                      <div className="flex flex-col gap-2 mt-3">
+                        <p className="text-black/60 font-semibold text-sm">
+                          Platform
+                        </p>
+                        <div className="">
+                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
+                            <div className="flex font-semibold gap-2 items-center text-gray-500">
+                              <span>
+                                <PiGithubLogoFill />
+                              </span>
+                              <p>GitHub</p>
+                            </div>
+                            <div className="text-indigo-700 text-3xl">
+                              <RiArrowDropDownLine />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/*  */}
+                      <div className="flex flex-col gap-2 mt-3">
+                        <p className="text-black/60 font-semibold text-sm">
+                          Platform
+                        </p>
+                        <div className="">
+                          <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
+                            <div className="flex font-semibold gap-2 items-center text-gray-500">
+                              <span>
+                                <PiGithubLogoFill />
+                              </span>
+                              <p>GitHub</p>
+                            </div>
+                            <div className="text-indigo-700 text-3xl">
+                              <RiArrowDropDownLine />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
