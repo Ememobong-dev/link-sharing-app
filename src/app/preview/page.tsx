@@ -4,6 +4,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import profileImg from "../../../public/profile_pic.jpg";
+import Image from "next/image";
 
 const Preview = () => {
   return (
@@ -11,19 +13,28 @@ const Preview = () => {
       <div className="bg-indigo-500 px-28 py-3 h-[400px] rounded-b-4xl relative">
         <Navbar />
         <div className="flex justify-center w-full items-center">
-          <div className="bg-white rounded-lg w-[400px] p-4 flex flex-col justify-center">
-           
+          <div className="bg-white absolute -bottom-[80%] rounded-2xl w-[300px] px-4 pt-3 pb-8 flex flex-col justify-center">
             <div className="mt-5 flex flex-col items-center justify-center">
               {/* img area */}
-              <div className="rounded-full mb-8 w-28 h-28x` p-3 bg-gray-500/10"></div>
+              <div className="">
+                <Image
+                  src={profileImg}
+                  className="rounded-full border-4 border-indigo-700 object-cover w-32 h-32"
+                  alt="profile_img"
+                />
+              </div>
               {/* profile details */}
-              <div className="rounded-lg w-[50%] py-2 px-8 bg-gray-500/10"></div>
-              <div className="rounded-lg mx-auto w-[25%] mt-4 py-1 px-3 bg-gray-500/10"></div>
+              <div className="text-center mt-5 text-3xl font-bold text-black-grey">
+                Benita Wright
+              </div>
+              <div className="mx-auto text-center mt-2 text-xs text-black/60">
+                Benita@example.com
+              </div>
             </div>
 
             {/* social buttons */}
-            <div className="flex flex-col items-center  justify-center gap-3 mt-10">
-              <div className="cursor-pointer w-1/2 flex justify-between items-center text-white bg-black/90 rounded-lg py-2 px-3">
+            <div className="flex flex-col items-center justify-center gap-3 mt-10">
+              <div className="cursor-pointer w-full flex justify-between items-center text-white bg-black/90 rounded-lg py-2 px-3">
                 <div className="flex gap-3 items-center">
                   <span>
                     <FaGithub />
@@ -34,7 +45,7 @@ const Preview = () => {
                   <FaArrowRight />
                 </div>
               </div>
-              <div className="cursor-pointer w-1/2 flex justify-between items-center text-white bg-red-400 rounded-lg py-2 px-3">
+              <div className="cursor-pointer w-full flex justify-between items-center text-white bg-red-400 rounded-lg py-2 px-3">
                 <div className="flex gap-3 items-center">
                   <span>
                     <FaYoutube />
@@ -45,7 +56,7 @@ const Preview = () => {
                   <FaArrowRight />
                 </div>
               </div>
-              <div className="cursor-pointer w-1/2 flex justify-between items-center text-white bg-blue-500 rounded-lg py-2 px-3">
+              <div className="cursor-pointer w-full flex justify-between items-center text-white bg-blue-500 rounded-lg py-2 px-3">
                 <div className="flex gap-3 items-center">
                   <span>
                     <FaLinkedin />

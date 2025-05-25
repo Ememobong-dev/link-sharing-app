@@ -69,7 +69,7 @@ const Profile = () => {
                           <input
                             type="text"
                             className="bg-white border border-black/25 w-full py-2 px-5 rounded-lg text-gray-500 placeholder-gray-500 focus:outline-none focus:shadow shadow-indigo-700"
-                            placeholder="Ben"
+                            placeholder="Benita"
                           />
                         </div>
                         <div className="flex justify-between">
@@ -90,7 +90,7 @@ const Profile = () => {
                           <input
                             type="text"
                             className="bg-white border border-black/25 w-full py-2 px-5 rounded-lg focus:border-0 text-gray-500 placeholder-gray-500 focus:outline-none focus:shadow shadow-indigo-700"
-                            placeholder="ben@example.com"
+                            placeholder="Benita@example.com"
                           />
                         </div>
                       </div>
