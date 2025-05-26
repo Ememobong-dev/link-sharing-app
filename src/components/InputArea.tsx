@@ -4,7 +4,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { FiLink } from "react-icons/fi";
 
-export const InputArea = ({i} : {i : number}) => {
+export const InputArea = ({ i, handleRemoveClick } : {i : number; handleRemoveClick: () => void}) => {
   return (
     <div className="bg-gray-500/10 p-4 rounded-lg h-auto">
       <div className="flex justify-between items-center">
@@ -13,7 +13,7 @@ export const InputArea = ({i} : {i : number}) => {
           Link #{i + 1}
         </div>
         <div>
-          <p className="text-gray-600">Remove</p>
+          <p className="text-gray-600 cursor-pointer hover:text-red-600" onClick={handleRemoveClick} >Remove</p>
         </div>
       </div>
       {/* inputs Area */}
@@ -37,7 +37,7 @@ export const InputArea = ({i} : {i : number}) => {
         <p className="text-black/60 font-semibold text-sm">link</p>
         <div className="">
           <div className="flex items-center justify-between bg-white border border-black/25 cursor-pointer w-full py-2 px-5 rounded-lg">
-            <div className="flex font-semibold gap-2 items-center text-gray-500">
+            <div className="flex w-full font-semibold gap-2 items-center text-gray-500">
               <span>
                 <FiLink />
               </span>
