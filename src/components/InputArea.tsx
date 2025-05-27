@@ -52,7 +52,7 @@ export const InputArea = ({
   handleOnChange,
 }: {
   i: number;
-  linkError: string;
+  linkError?: string;
   linkValue: string;
   handleOnChange: (e: string) => void;
   handleRemoveClick: () => void;
