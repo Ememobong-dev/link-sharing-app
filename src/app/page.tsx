@@ -8,14 +8,32 @@ import { InputArea } from "@/components/InputArea";
 
 export default function Home() {
   const [linksArray, setlinksArray] = useState([{}]);
+  const [linkValue, setLinkValue] = useState("");
+  const [linkError, setLinkError] = useState("");
+  const [isSaved, setIsSaved] = useState(false);
+
+  const handleSave = () => {
+    const isLink = linkValue.includes("://") || linkValue.includes("www");
+    if(!linkValue) {
+      setLinkError("Please input a link");
+      return;
+    }
+    
+    if (!isLink) {
+      setLinkError("Not a link");
+      setIsSaved(false);
+      return;
+    } else {
+      setLinkError("");
+      setIsSaved(true);
+    }
+  };
 
   const handleRemoveFn = (index: number) => {
     const linksArray2 = [...linksArray];
-    linksArray2.splice(index, 1)
-    setlinksArray ([...linksArray2])
-  }
-
-
+    linksArray2.splice(index, 1);
+    setlinksArray([...linksArray2]);
+  };
 
   return (
     <div className="w-full flex flex-col  p-0">
@@ -39,7 +57,7 @@ export default function Home() {
                     </p>
                     <div className="mt-5 mb-4">
                       <button
-                        onClick={() => setlinksArray(prev => [...prev, {}])}
+                        onClick={() => setlinksArray((prev) => [...prev, {}])}
                         className="text-indigo-600 border border-indigo-700 w-full py-2 px-6 rounded-lg cursor-pointer font-bold hover:bg-indigo-600 hover:text-white"
                       >
                         + Add new link
@@ -48,15 +66,26 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col gap-5">
                     {linksArray.map((_, idx) => (
-                     <InputArea i={idx} key={idx} handleRemoveClick={() => handleRemoveFn(idx)} />
+                      <InputArea
+                        i={idx}
+                        key={idx}
+                        linkError={linkError}
+                        linkValue={linkValue}
+                        handleOnChange={setLinkValue}
+                        handleRemoveClick={() => handleRemoveFn(idx)}
+                      />
                     ))}
                   </div>
                 </div>
                 {/* SAVE BUTTON AREA */}
                 <hr className="border-b border-gray-500/10" />
                 <div className="flex justify-end mt-5 px-14">
-                  <button className="bg-indigo-700 py-2 px-5 rounded-lg text-white hover:bg-transparent hover:text-black cursor-pointer border border-indigo-700">
-                    Save
+                  <button
+                    disabled={isSaved}
+                    onClick={handleSave}
+                    className="bg-indigo-700 py-2 px-5 rounded-lg text-white hover:bg-transparent hover:text-black cursor-pointer border border-indigo-700"
+                  >
+                    {isSaved ? "Saved" : "Save"}
                   </button>
                 </div>
               </div>

@@ -59,7 +59,7 @@ export const PhoneDisplay = ({
                 <span>
                   <FaGithub />
                 </span>
-                <p>Github</p>
+                <p>GitHub</p>
               </div>
               <div>
                 <FaArrowRight />
@@ -81,7 +81,7 @@ export const PhoneDisplay = ({
                 <span>
                   <FaLinkedin />
                 </span>
-                <p>Github</p>
+                <p>LinkedIn</p>
               </div>
               <div>
                 <FaArrowRight />
