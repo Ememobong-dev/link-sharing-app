@@ -46,15 +46,15 @@ const linkOptions = [
 
 export const InputArea = ({
   i,
-  handleRemoveClick,
   linkError,
   linkValue,
   handleOnChange,
+  handleRemoveClick,
 }: {
   i: number;
   linkError?: string;
-  linkValue: string;
-  handleOnChange: (e: string) => void;
+  linkValue: { platform: string; link: string };
+  handleOnChange: (newData: Partial<{ platform: string; link: string }>) => void;
   handleRemoveClick: () => void;
 }) => {
   const [selectOptionOpen, setSelectOptionOpen] = useState(false);
@@ -98,6 +98,7 @@ export const InputArea = ({
                 <div
                   onClick={() => {
                     setSelectedObjectIndex(index);
+                    handleOnChange({ platform: item.linkName });
                     setSelectOptionOpen(false);
                   }}
                   key={index}
@@ -121,9 +122,9 @@ export const InputArea = ({
               </span>
               <input
                 type="text"
-                value={linkValue}
+                value={linkValue.link}
                 onChange={(e) => {
-                  handleOnChange(e.target.value);
+                  handleOnChange({ link: e.target.value });
                 }}
                 className="w-full bg-transparent focus:border-0 placeholder-gray-500 focus:outline-0"
                 placeholder="https://www.github.com/benwright"
